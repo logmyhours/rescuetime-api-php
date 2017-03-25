@@ -37,7 +37,7 @@ class RequestQueryParameters
      * One of "rank", "interval", "member"
      *
      * Consider this the X - axis of the returned data.
-     * It is what determines how your data is crunched serverside
+     * It is what determines how your data is crunched server side
      * for ordered return.
      *  1. rank: (default) Organized around a calculated value, usually a sum like time spent.
      *  2. interval: Organized around calendar time.
@@ -48,10 +48,10 @@ class RequestQueryParameters
     private $perspective;
 
     /**
-     * One of "month", "week", "day", "hour"
+     * One of "month", "week", "day", "hour", "minute"
      *
      * Default is "hour". In an interval report, the X axis unit.
-     * In other words, data is summarizd into chunks of this size.
+     * In other words, data is summarized into chunks of this size.
      *
      * @var string
      */
@@ -162,7 +162,7 @@ class RequestQueryParameters
      *
      * @var array
      */
-    private $availableResolutionTimes = array("month", "week", "day", "hour");
+    private $availableResolutionTimes = array("month", "week", "day", "hour", "minute");
 
     /**
      * List of permitted restrict kinds (used in @setRestrictKind)
